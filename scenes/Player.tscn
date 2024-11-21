@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bdxbl63ipljhb" path="res://assets/Player-Sheet.png" id="2_cmslc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0m3c"]
-size = Vector2(50, 97)
+size = Vector2(50, 79)
 
 [sub_resource type="Animation" id="Animation_681po"]
 resource_name = "Idle_down"
@@ -237,10 +237,11 @@ states/Walk/position = Vector2(552, 72)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_smjh7"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_1c7st"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_yo6hv")]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_74rfs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(17, 35.5)
+position = Vector2(17, 40.5)
 shape = SubResource("RectangleShape2D_r0m3c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

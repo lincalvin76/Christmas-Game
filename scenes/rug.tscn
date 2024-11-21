@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1fq21sdejh4r"]
+
+[ext_resource type="Script" path="res://scripts/rug.gd" id="1_h3j6h"]
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="2_tunnu"]
+[ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="3_tvd2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rt2j"]
+size = Vector2(44.9523, 32.6236)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkh3v"]
+size = Vector2(40.9238, 29.4333)
+
+[node name="Rug" type="StaticBody2D"]
+script = ExtResource("1_h3j6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tunnu")
+region_enabled = true
+region_rect = Rect2(0, 32.133, 45.6185, 32.0545)
+
+[node name="InteractionArea" parent="." instance=ExtResource("3_tvd2q")]
+action_name = "remove"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-0.0511074, 1.33101)
+shape = SubResource("RectangleShape2D_3rt2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.0183048, 0.970032)
+shape = SubResource("RectangleShape2D_vkh3v")
+disabled = true
