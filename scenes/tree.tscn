@@ -18,7 +18,7 @@ script = ExtResource("1_hixs6")
 scale = Vector2(7, 7)
 texture = ExtResource("2_hpl5s")
 region_enabled = true
-region_rect = Rect2(48.7701, 32.0299, 30.5344, 31.8456)
+region_rect = Rect2(48.4714, 32.071, 31.1356, 33.1418)
 
 [node name="InteractionArea" parent="." instance=ExtResource("3_1cn8g")]
 action_name = "decorate"

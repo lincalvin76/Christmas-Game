@@ -1,21 +1,75 @@
-[gd_scene load_steps=3 format=3 uid="uid://bri32w5dkyriv"]
+[gd_scene load_steps=5 format=3 uid="uid://bri32w5dkyriv"]
 
 [ext_resource type="PackedScene" uid="uid://coykyixr36xsh" path="res://scenes/drop area.tscn" id="1_gi48q"]
 [ext_resource type="PackedScene" uid="uid://dj86gu62twheb" path="res://scenes/object.tscn" id="2_nslvy"]
+[ext_resource type="Texture2D" uid="uid://cekx67h5bqqjr" path="res://assets/tree_decor_back.jpg" id="3_04s1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvc0p"]
 
 [node name="TreeDecorGame" type="Node2D"]
+z_index = 1
 
-[node name="drop areas" parent="." instance=ExtResource("1_gi48q")]
-position = Vector2(244, 174)
+[node name="Background" type="StaticBody2D" parent="."]
 
-[node name="drop areas2" parent="." instance=ExtResource("1_gi48q")]
-position = Vector2(812, 260)
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(989.63, 498.402)
+scale = Vector2(1.05844, 1.00778)
+texture = ExtResource("3_04s1y")
 
-[node name="drop areas3" parent="." instance=ExtResource("1_gi48q")]
-position = Vector2(376, 546)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background"]
+shape = SubResource("RectangleShape2D_uvc0p")
+disabled = true
 
-[node name="drop areas4" parent="." instance=ExtResource("1_gi48q")]
-position = Vector2(1256.86, 675.125)
+[node name="Ornament Drop" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(800.549, 809.036)
+type = 1
 
-[node name="Object" parent="." instance=ExtResource("2_nslvy")]
-position = Vector2(1303.3, 162.704)
+[node name="Star Drop" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(876.217, 257.622)
+
+[node name="Ornament Drop2" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(732.762, 491.297)
+type = 1
+
+[node name="Ornament Drop3" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(1011.88, 622.8)
+type = 1
+
+[node name="Present Drop" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(1392.43, 941.507)
+type = 2
+
+[node name="Present Drop 2" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(540.957, 934.372)
+type = 2
+
+[node name="Present Drop 3" parent="." instance=ExtResource("1_gi48q")]
+position = Vector2(298.359, 929.615)
+type = 2
+
+[node name="Star" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(1638.66, 108)
+
+[node name="Ornament" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(1495.95, 336.328)
+type = 1
+
+[node name="Ornament2" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(1748.07, 341.085)
+type = 1
+
+[node name="Ornament3" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(1619.63, 557.521)
+type = 1
+
+[node name="Present" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(149.769, 188.867)
+type = 2
+
+[node name="Present2" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(461.342, 300.652)
+type = 2
+
+[node name="Present 3" parent="." instance=ExtResource("2_nslvy")]
+position = Vector2(128.364, 457.628)
+type = 2
