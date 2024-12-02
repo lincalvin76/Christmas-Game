@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bri32w5dkyriv"]
+[gd_scene load_steps=7 format=3 uid="uid://bri32w5dkyriv"]
 
 [ext_resource type="PackedScene" uid="uid://coykyixr36xsh" path="res://scenes/drop area.tscn" id="1_gi48q"]
+[ext_resource type="Script" path="res://scripts/queue_remove.gd" id="1_svoa2"]
 [ext_resource type="PackedScene" uid="uid://dj86gu62twheb" path="res://scenes/object.tscn" id="2_nslvy"]
 [ext_resource type="Texture2D" uid="uid://cekx67h5bqqjr" path="res://assets/tree_decor_back.jpg" id="3_04s1y"]
 [ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="4_v31eb"]
@@ -9,6 +10,7 @@
 
 [node name="TreeDecorGame" type="Node2D"]
 z_index = 1
+script = ExtResource("1_svoa2")
 
 [node name="Background" type="StaticBody2D" parent="."]
 

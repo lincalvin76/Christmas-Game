@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdl2x3xt1q6qu"]
+[gd_scene load_steps=10 format=3 uid="uid://bdl2x3xt1q6qu"]
 
+[ext_resource type="Script" path="res://scripts/queue_remove.gd" id="1_80dbt"]
 [ext_resource type="Texture2D" uid="uid://c240xupadk2qk" path="res://assets/black.png" id="1_xfwne"]
 [ext_resource type="Texture2D" uid="uid://ufglkl7uc8so" path="res://assets/fireplace_empty.png" id="2_57v8f"]
 [ext_resource type="Script" path="res://scripts/delete_pumpkin.gd" id="2_vtjn6"]
@@ -15,6 +16,7 @@ size = Vector2(3822.54, 519.747)
 
 [node name="PumpkinRemovalGame" type="Node2D"]
 z_index = 2
+script = ExtResource("1_80dbt")
 
 [node name="black_back" type="Sprite2D" parent="."]
 z_index = -3

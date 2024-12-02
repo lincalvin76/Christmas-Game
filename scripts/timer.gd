@@ -25,6 +25,8 @@ func _process(delta):
 
 func _on_timer_timeout() -> void:
 	if Global.tasks != TOTAL_TASKS:
+		Global.game = 0
 		get_tree().change_scene_to_file("res://scenes/lose.tscn")
 	else:
+		Global.game = 0
 		get_tree().change_scene_to_file("res://scenes/win.tscn")
