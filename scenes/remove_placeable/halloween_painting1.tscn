@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://kvtp1cmyipiu"]
+
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_u0wlv"]
+[ext_resource type="Script" path="res://scripts/halloween_painting_1.gd" id="1_w5axc"]
+[ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="2_83vmn"]
+[ext_resource type="PackedScene" uid="uid://dhkoxdfsonwbq" path="res://scenes/indicator.tscn" id="3_kudko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iykb0"]
+size = Vector2(184.038, 241.668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni42t"]
+
+[node name="HalloweenPainting1" type="StaticBody2D"]
+script = ExtResource("1_w5axc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_u0wlv")
+region_enabled = true
+region_rect = Rect2(112.369, 65.4489, 15.1862, 11.3723)
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_83vmn")]
+action_name = "replace"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-31.019, 10.166)
+shape = SubResource("RectangleShape2D_iykb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.96681, 8.2589)
+shape = SubResource("RectangleShape2D_ni42t")
+disabled = true
+
+[node name="Indicator" parent="." instance=ExtResource("3_kudko")]
+position = Vector2(-0.128357, -64.4806)
+scale = Vector2(2, 2)

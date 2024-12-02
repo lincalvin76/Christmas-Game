@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://b162wjwrp4ne2"]
+
+[ext_resource type="Script" path="res://scripts/how_to_play.gd" id="1_2xbhc"]
+[ext_resource type="Texture2D" uid="uid://cchxr6ru662e6" path="res://assets/how_to_play.png" id="2_lv5dt"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="2_u7jtb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ryknj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgiwi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o40b"]
+bg_color = Color(0.834614, 0.834614, 0.834614, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmfos"]
+bg_color = Color(0.454524, 0.454524, 0.454524, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2xbhc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.93)
+texture = ExtResource("2_lv5dt")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -201.0
+offset_top = 373.499
+offset_right = 201.0
+offset_bottom = 481.499
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_u7jtb")
+theme_override_font_sizes/font_size = 128
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ryknj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mgiwi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8o40b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tmfos")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mgiwi")
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

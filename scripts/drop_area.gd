@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export_enum("STAR:0", "ORNAMENT:1", "PRESENT:2") 
+@export_enum("STAR:0", "ORNAMENT:1", "PRESENT:2", "STOCKING:3") 
 var type : int
 
 @export var filled : bool
@@ -11,6 +11,8 @@ func _ready():
 	if self.type == 1:
 		modulate = Color(Color.RED, 0.7)
 	if self.type == 2:
+		modulate = Color(Color.WHITE, 0.7)
+	if self.type == 3:
 		modulate = Color(Color.WHITE, 0.7)
 		
 func _process(delta):

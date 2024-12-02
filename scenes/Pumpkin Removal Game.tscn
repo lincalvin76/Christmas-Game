@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdl2x3xt1q6qu"]
+
+[ext_resource type="Texture2D" uid="uid://c240xupadk2qk" path="res://assets/black.png" id="1_xfwne"]
+[ext_resource type="Texture2D" uid="uid://ufglkl7uc8so" path="res://assets/fireplace_empty.png" id="2_57v8f"]
+[ext_resource type="Script" path="res://scripts/delete_pumpkin.gd" id="2_vtjn6"]
+[ext_resource type="Texture2D" uid="uid://d4dmpdtxbhke3" path="res://assets/chimney.png" id="3_j3i0a"]
+[ext_resource type="PackedScene" uid="uid://bi8wp3hbju2hl" path="res://scenes/flick_item.tscn" id="4_khuex"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="6_lj3fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_313lt"]
+size = Vector2(1910.43, 60.6129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08f1j"]
+size = Vector2(3822.54, 519.747)
+
+[node name="PumpkinRemovalGame" type="Node2D"]
+z_index = 2
+
+[node name="black_back" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(960.909, 470.401)
+texture = ExtResource("1_xfwne")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="black_back"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="black_back/StaticBody2D"]
+position = Vector2(-4.90302, 570.166)
+shape = SubResource("RectangleShape2D_313lt")
+
+[node name="main" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(960.909, 470.401)
+texture = ExtResource("2_57v8f")
+
+[node name="chimney" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(960.909, 470.401)
+texture = ExtResource("3_j3i0a")
+
+[node name="FlickItem" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(755.082, 908.54)
+
+[node name="FlickItem2" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(873.605, 999.001)
+
+[node name="FlickItem3" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(1040.85, 896.399)
+
+[node name="FlickItem4" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(1130.81, 921.574)
+
+[node name="FlickItem5" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(842.52, 912.686)
+
+[node name="FlickItem6" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(950.231, 909.273)
+
+[node name="FlickItem7" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(745.668, 999.711)
+
+[node name="FlickItem8" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(987.646, 1000.34)
+
+[node name="FlickItem9" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(1065.76, 989.001)
+
+[node name="FlickItem10" parent="." instance=ExtResource("4_khuex")]
+light_mask = 1
+visibility_layer = 1
+z_index = -3
+position = Vector2(1142.62, 963.802)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(960.909, 470.401)
+collision_layer = 8
+collision_mask = 8
+input_pickable = false
+script = ExtResource("2_vtjn6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-12.9007, 969.991)
+shape = SubResource("RectangleShape2D_08f1j")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 598.272
+offset_right = 1361.27
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_lj3fw")
+theme_override_font_sizes/font_size = 128
+text = "REMOVE THE PUMPKINS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

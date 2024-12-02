@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqoltxxyd6aqq"]
+
+[ext_resource type="Script" path="res://scripts/fire_place_2.gd" id="1_e1dae"]
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_mhdfu"]
+[ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="2_gwo5v"]
+[ext_resource type="PackedScene" uid="uid://dhkoxdfsonwbq" path="res://scenes/indicator.tscn" id="4_oyfvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7lfw"]
+size = Vector2(146.301, 239.112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqtjp"]
+size = Vector2(77.1628, 74.9154)
+
+[node name="FirePlace2" type="StaticBody2D"]
+z_index = -2
+script = ExtResource("1_e1dae")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_gwo5v")]
+action_name = "decorate"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0.321226, 5.58815)
+shape = SubResource("RectangleShape2D_s7lfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.61859, -33.2102)
+shape = SubResource("RectangleShape2D_bqtjp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_mhdfu")
+region_enabled = true
+region_rect = Rect2(0, 0, 31.967, 32.008)
+
+[node name="Indicator" parent="." instance=ExtResource("4_oyfvv")]
+position = Vector2(-0.201324, -10.5516)
+scale = Vector2(2, 2)

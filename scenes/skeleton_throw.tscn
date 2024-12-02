@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0km5y5jo2mj3"]
+
+[ext_resource type="Script" path="res://scripts/skeleton.gd" id="1_a4p5e"]
+[ext_resource type="Texture2D" uid="uid://dwwi337ttni3f" path="res://assets/skelly.png" id="2_0x30p"]
+[ext_resource type="Script" path="res://scripts/skeleton_kill.gd" id="3_ysu7h"]
+[ext_resource type="Texture2D" uid="uid://i7o8owdxtan2" path="res://assets/Wallpaper.png" id="4_hekpy"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="5_g1u34"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foakl"]
+size = Vector2(3456, 48.8888)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yy4r"]
+size = Vector2(214, 1163.17)
+
+[node name="SkeletonThrow" type="Node2D"]
+z_index = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(955.927, 355.177)
+collision_layer = 9
+collision_mask = 2
+script = ExtResource("1_a4p5e")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-0.613037, 142.449)
+scale = Vector2(1.44244, 1.44244)
+texture = ExtResource("2_0x30p")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(15.7784, -136.197, -47.7177, -123.498, -84.2279, -79.0511, -84.2279, -48.8904, -92.1649, -39.366, -69.9413, -4.44321, -58.8295, 16.193, -63.5917, 40.0041, -22.3193, 60.6402, -22.3193, 78.1017, -69.9413, 89.2135, -109.626, 113.025, -135.025, 133.661, -157.248, 166.996, -158.836, 187.632, -174.71, 189.22, -157.248, 220.968, -128.675, 200.332, -133.437, 163.821, -68.3539, 113.025, -28.6689, 125.724, -14.3823, 128.898, -22.3193, 149.535, -58.8295, 168.583, -62.0043, 193.982, -30.2563, 206.681, -30.2563, 224.143, -58.8295, 243.191, -74.7035, 235.254, -76.2909, 281.289, -66.7665, 320.974, -98.5145, 403.519, -106.451, 460.665, -144.549, 479.714, -117.563, 494.001, -71.5287, 495.588, -88.9901, 460.665, -81.0531, 398.757, -46.1303, 338.435, -6.44525, 320.974, 44.3516, 324.149, 71.3374, 400.344, 74.5122, 465.427, 57.0508, 495.588, 103.085, 492.413, 133.246, 474.952, 96.7358, 454.316, 88.7988, 398.757, 80.8618, 340.023, 68.1627, 313.037, 88.7988, 247.954, 76.0996, 235.254, 52.2886, 249.541, 22.128, 230.492, 17.3658, 209.856, 74.5122, 193.982, 66.5753, 162.234, 26.8902, 143.185, 25.3028, 128.898, 69.7501, 117.787, 77.687, 95.5631, 122.134, 136.835, 138.008, 168.583, 104.673, 193.982, 150.708, 203.506, 171.344, 173.346, 152.295, 159.059, 117.372, 101.913, 60.2256, 76.5143, 20.5406, 71.752, 22.128, 55.878, 66.5753, 46.3537, 68.1627, 19.3678, 123.722, -25.0794, 120.547, -63.177, 93.561, -107.624, 64.9879, -133.023)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1105.15, 1027.01)
+shape = SubResource("RectangleShape2D_foakl")
+
+[node name="Right_Kill" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_ysu7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right_Kill"]
+position = Vector2(2833.03, 490.078)
+shape = SubResource("RectangleShape2D_5yy4r")
+
+[node name="Left_Kill" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_ysu7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_Kill"]
+position = Vector2(-718.545, 490.553)
+shape = SubResource("RectangleShape2D_5yy4r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(960.572, 470.513)
+texture = ExtResource("4_hekpy")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 598.272
+offset_right = 1361.27
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("5_g1u34")
+theme_override_font_sizes/font_size = 128
+text = "YEET THE SKELETON"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Right_Kill" to="Right_Kill" method="_on_body_entered"]
+[connection signal="body_entered" from="Left_Kill" to="Left_Kill" method="_on_body_entered"]

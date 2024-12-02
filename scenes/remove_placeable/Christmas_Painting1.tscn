@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cutpslnodtwyw"]
+
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_wvv0p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5xgr"]
+
+[node name="ChristmasPainting1" type="StaticBody2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_wvv0p")
+region_enabled = true
+region_rect = Rect2(96.6285, 65.7309, 14.7297, 10.846)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.96681, 8.2589)
+shape = SubResource("RectangleShape2D_q5xgr")
+disabled = true

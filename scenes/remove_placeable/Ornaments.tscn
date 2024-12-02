@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c41h40nevmv88"]
+
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_3kn56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1mwl"]
+
+[node name="Ornaments" type="StaticBody2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_3kn56")
+region_enabled = true
+region_rect = Rect2(112.565, 49.8482, 14.5511, 14.3402)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -2
+position = Vector2(8.96681, 8.2589)
+shape = SubResource("RectangleShape2D_b1mwl")
+disabled = true

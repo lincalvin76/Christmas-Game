@@ -11,6 +11,7 @@ func _ready():
 func _decorate_tree():
 	remove_child(interaction_area)
 	
+	Global.game = 1
 	var tree_node = load("res://scenes/Tree Decor Game.tscn").instantiate()
 	sprite.get_parent().get_parent().get_parent().add_child(tree_node)
 	

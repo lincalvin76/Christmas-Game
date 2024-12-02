@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://e7528wohqcj8"]
+
+[ext_resource type="Texture2D" uid="uid://1lios8i7jeht" path="res://assets/Win.png" id="1_bewq1"]
+[ext_resource type="AudioStream" uid="uid://c37bb5wym2e6e" path="res://music/win.wav" id="2_3yyoc"]
+
+[node name="Win" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(957.912, 475.762)
+scale = Vector2(1.00124, 1)
+texture = ExtResource("1_bewq1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_3yyoc")
+autoplay = true

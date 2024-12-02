@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://nww3hgxmn71q"]
+
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_do5x8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lf186"]
+
+[node name="FakeSanta" type="StaticBody2D"]
+z_index = -2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_do5x8")
+region_enabled = true
+region_rect = Rect2(145.693, 48.0311, 13.7283, 16.5643)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.96681, 8.2589)
+shape = SubResource("RectangleShape2D_lf186")
+disabled = true

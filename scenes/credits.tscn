@@ -1,0 +1,242 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi8rkxrkc1lxc"]
+
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_tm7c8"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="2_8ulmy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_st4m4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kk8v"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1d4cr"]
+bg_color = Color(0.834614, 0.834614, 0.834614, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfqkh"]
+bg_color = Color(0.454524, 0.454524, 0.454524, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tm7c8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = -987.363
+offset_top = -504.793
+offset_right = 960.637
+offset_bottom = 503.207
+color = Color(0.136826, 0.136826, 0.136826, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = -369.568
+offset_top = -435.568
+offset_right = 374.432
+offset_bottom = -304.568
+color = Color(0.212305, 0.212305, 0.212305, 1)
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 1
+offset_left = -22.7731
+offset_top = 10.0
+offset_right = 774.227
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 128
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -405.0
+offset_top = -294.0
+offset_right = 405.0
+offset_bottom = 365.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.241156, 0.241156, 0.241156, 1)
+
+[node name="Label" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.5
+offset_top = -336.0
+offset_right = 225.5
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "Basic Assets: SHIBIBUDI"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.5
+offset_top = -231.0
+offset_right = 231.5
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "Main Art Assets: CALVIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -149.0
+offset_right = 248.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "Main Programmer: CALVIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -66.0
+offset_right = 248.5
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "Main Designer: CALVIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = 21.0
+offset_right = 248.5
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "Music Design: CALVIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.0
+offset_top = 113.0
+offset_right = 323.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "Feedback Givers: Some CS127 TA's"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.0
+offset_top = 231.0
+offset_right = 323.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 80
+text = "(One man army!)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -201.0
+offset_top = 390.962
+offset_right = 201.0
+offset_bottom = 498.962
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8ulmy")
+theme_override_font_sizes/font_size = 128
+theme_override_styles/focus = SubResource("StyleBoxEmpty_st4m4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4kk8v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1d4cr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kfqkh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4kk8v")
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

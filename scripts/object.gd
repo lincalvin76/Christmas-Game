@@ -9,12 +9,13 @@ var initialPos : Vector2
 
 @onready var sprite = $Sprite2D
 
-@export_enum("STAR:0", "ORNAMENT:1", "PRESENT:2") 
+@export_enum("STAR:0", "ORNAMENT:1", "PRESENT:2", "STOCKING:3") 
 var type : int
 
 func _ready() -> void:
 	if self.type == 0:
 		sprite.set_texture(load("res://assets/Star.png"))
+		
 	if self.type == 1:
 		var num = randi() % 3
 		if num == 0:
@@ -25,11 +26,38 @@ func _ready() -> void:
 			sprite.set_texture(load("res://assets/Purple_Ornament.png"))
 		
 	if self.type == 2:
-		sprite.set_texture(load("res://icon.svg"))
+		sprite.scale = Vector2(2,2)
+		var num = randi() % 3
+		if num == 0:
+			sprite.set_texture(load("res://assets/present1.png"))
+		if num == 1:
+			sprite.set_texture(load("res://assets/present2.png"))
+		if num == 2:
+			sprite.set_texture(load("res://assets/present3.png"))
+		
+	if self.type == 3:
+		var num = randi() % 3
+		if num == 0:
+			sprite.set_texture(load("res://assets/stocking1.png"))
+		if num == 1:
+			sprite.set_texture(load("res://assets/stocking2.png"))
+		if num == 2:
+			sprite.set_texture(load("res://assets/stocking3.png"))
 		
 func _process(delta):
-	if Global.counter == 7:
-		self.get_parent().queue_free()
+	if Global.game == 1:
+		if Global.counter == 7:
+			self.get_parent().queue_free()
+			Global.tasks += 1
+			Global.counter = 0
+			Global.game = 0
+	if Global.game == 3:
+		if Global.counter == 3:
+			self.get_parent().queue_free()
+			Global.tasks += 1
+			Global.counter = 0
+			Global.game = 0
+	
 		
 	if draggable:
 		if Input.is_action_just_pressed("click"):
@@ -45,7 +73,6 @@ func _process(delta):
 				dropped = true
 				draggable = false
 				Global.counter += 1
-				print(Global.counter)
 				tween.tween_property(self, "position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 				body_ref.filled = true
 			else:
@@ -61,6 +88,8 @@ func _on_area_2d_body_entered(body : StaticBody2D):
 			body.modulate = Color(Color.DARK_RED, 1)
 		elif body.type == 2:
 			body.modulate = Color(Color.DIM_GRAY, 1)
+		elif body.type == 3:
+			body.modulate = Color(Color.DIM_GRAY, 1)
 		body_ref = body
 
 func _on_area_2d_body_exited(body):
@@ -71,6 +100,8 @@ func _on_area_2d_body_exited(body):
 		elif body.type == 1:
 			body.modulate = Color(Color.RED, 0.7)
 		elif body.type == 2:
+			body.modulate = Color(Color.WHITE, 0.7)
+		elif body.type == 3:
 			body.modulate = Color(Color.WHITE, 0.7)
 
 

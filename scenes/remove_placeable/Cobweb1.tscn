@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7s5113jbyxa5"]
+
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_84c8y"]
+[ext_resource type="Script" path="res://scripts/cobweb_1.gd" id="1_vtcy6"]
+[ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="2_6p85u"]
+[ext_resource type="PackedScene" uid="uid://dhkoxdfsonwbq" path="res://scenes/indicator.tscn" id="3_l8te2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1uao"]
+size = Vector2(116, 204.668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwg5y"]
+
+[node name="Cobweb1" type="StaticBody2D"]
+script = ExtResource("1_vtcy6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_84c8y")
+region_enabled = true
+region_rect = Rect2(127.349, -0.0778031, 16.7056, 14.9519)
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_6p85u")]
+action_name = "remove"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(2, -8.33399)
+shape = SubResource("RectangleShape2D_u1uao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.96681, 8.2589)
+shape = SubResource("RectangleShape2D_cwg5y")
+disabled = true
+
+[node name="Indicator" parent="." instance=ExtResource("3_l8te2")]
+position = Vector2(-0.128357, -64.4806)
+scale = Vector2(2, 2)

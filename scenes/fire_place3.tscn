@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctfunwny8t64j"]
+
+[ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="1_20rsk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1iqa"]
+size = Vector2(80.5181, 75.5923)
+
+[node name="FirePlace4" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.0590566, -32.8718)
+shape = SubResource("RectangleShape2D_s1iqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_20rsk")
+region_enabled = true
+region_rect = Rect2(63.93, 0, 31.967, 32.008)

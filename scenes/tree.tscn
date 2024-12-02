@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://djgi3rbgkdx8h"]
+[gd_scene load_steps=7 format=3 uid="uid://djgi3rbgkdx8h"]
 
 [ext_resource type="Script" path="res://scripts/tree.gd" id="1_hixs6"]
 [ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="2_hpl5s"]
 [ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="3_1cn8g"]
+[ext_resource type="PackedScene" uid="uid://dhkoxdfsonwbq" path="res://scenes/indicator.tscn" id="4_b4wi3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rt2j"]
 size = Vector2(280.984, 250.95)
@@ -30,3 +31,7 @@ shape = SubResource("RectangleShape2D_3rt2j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.1157, -33.2099)
 shape = SubResource("RectangleShape2D_vkh3v")
+
+[node name="Indicator" parent="." instance=ExtResource("4_b4wi3")]
+position = Vector2(-3.5636, -122.2)
+scale = Vector2(2, 2)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1fq21sdejh4r"]
+[gd_scene load_steps=7 format=3 uid="uid://c1fq21sdejh4r"]
 
 [ext_resource type="Script" path="res://scripts/rug.gd" id="1_h3j6h"]
 [ext_resource type="Texture2D" uid="uid://ufagvpj7b6si" path="res://assets/Decor.png" id="2_tunnu"]
 [ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="3_tvd2q"]
+[ext_resource type="PackedScene" uid="uid://dhkoxdfsonwbq" path="res://scenes/indicator.tscn" id="4_8d6go"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rt2j"]
 size = Vector2(44.9523, 32.6236)
@@ -29,3 +30,7 @@ shape = SubResource("RectangleShape2D_3rt2j")
 position = Vector2(-0.0183048, 0.970032)
 shape = SubResource("RectangleShape2D_vkh3v")
 disabled = true
+
+[node name="Indicator" parent="." instance=ExtResource("4_8d6go")]
+position = Vector2(-0.0845261, -14.2287)
+scale = Vector2(0.5, 0.5)

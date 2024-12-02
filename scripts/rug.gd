@@ -14,4 +14,5 @@ func _remove_rug():
 	t.global_position = sprite.global_position
 	sprite.get_parent().get_parent().add_child(t)
 	
+	Global.tasks += 1
 	queue_free()

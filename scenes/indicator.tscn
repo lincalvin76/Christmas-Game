@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhkoxdfsonwbq"]
+
+[ext_resource type="Script" path="res://scripts/indicator.gd" id="1_gqf4y"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="1_khatt"]
+
+[node name="Indicator" type="Node2D"]
+script = ExtResource("1_gqf4y")
+
+[node name="Label" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.5
+offset_right = 52.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.867723, 0.854365, 0.347526, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_khatt")
+theme_override_font_sizes/font_size = 32
+text = "!"
+horizontal_alignment = 1
+vertical_alignment = 1

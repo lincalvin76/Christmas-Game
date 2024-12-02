@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://xsked66lqdoa"]
+
+[ext_resource type="PackedScene" uid="uid://dj86gu62twheb" path="res://scenes/object.tscn" id="1_x3idk"]
+[ext_resource type="PackedScene" uid="uid://coykyixr36xsh" path="res://scenes/drop area.tscn" id="2_0vfrd"]
+[ext_resource type="Texture2D" uid="uid://c7ha8iapru346" path="res://assets/fireplace.png" id="3_qyyn8"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="4_650er"]
+
+[node name="FirePlaceDecorGame" type="Node2D"]
+z_index = 2
+
+[node name="Object" parent="." instance=ExtResource("1_x3idk")]
+position = Vector2(209.935, 288.973)
+type = 3
+
+[node name="Object2" parent="." instance=ExtResource("1_x3idk")]
+position = Vector2(1631.27, 139.386)
+type = 3
+
+[node name="Object3" parent="." instance=ExtResource("1_x3idk")]
+position = Vector2(1651.99, 486.787)
+type = 3
+
+[node name="drop areas" parent="." instance=ExtResource("2_0vfrd")]
+z_index = -1
+position = Vector2(615.73, 719.252)
+type = 3
+
+[node name="drop areas2" parent="." instance=ExtResource("2_0vfrd")]
+z_index = -1
+position = Vector2(964.173, 735.183)
+type = 3
+
+[node name="drop areas3" parent="." instance=ExtResource("2_0vfrd")]
+z_index = -1
+position = Vector2(1303.16, 732.447)
+type = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(964, 470)
+texture = ExtResource("3_qyyn8")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 598.272
+offset_right = 1361.27
+offset_bottom = 143.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_650er")
+theme_override_font_sizes/font_size = 128
+text = "DECORATE THE FIRE PLACE"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bri32w5dkyriv"]
+[gd_scene load_steps=6 format=3 uid="uid://bri32w5dkyriv"]
 
 [ext_resource type="PackedScene" uid="uid://coykyixr36xsh" path="res://scenes/drop area.tscn" id="1_gi48q"]
 [ext_resource type="PackedScene" uid="uid://dj86gu62twheb" path="res://scenes/object.tscn" id="2_nslvy"]
 [ext_resource type="Texture2D" uid="uid://cekx67h5bqqjr" path="res://assets/tree_decor_back.jpg" id="3_04s1y"]
+[ext_resource type="FontFile" uid="uid://8xrkyn2wqspt" path="res://fonts/Warungasem-rgO1O.ttf" id="4_v31eb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvc0p"]
 
@@ -73,3 +74,20 @@ type = 2
 [node name="Present 3" parent="." instance=ExtResource("2_nslvy")]
 position = Vector2(128.364, 457.628)
 type = 2
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 543.098
+offset_top = -1.20138
+offset_right = 1306.09
+offset_bottom = 141.799
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_v31eb")
+theme_override_font_sizes/font_size = 128
+text = "DECORATE THE TREE"
+horizontal_alignment = 1
+vertical_alignment = 1

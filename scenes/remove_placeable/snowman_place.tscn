@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://k1m5qeoljjqe"]
+
+[ext_resource type="PackedScene" uid="uid://b5mr6sxtcekqd" path="res://interaction/interaction area/interaction_area.tscn" id="1_5g8j2"]
+[ext_resource type="Script" path="res://scripts/snowman_place.gd" id="1_r78lr"]
+[ext_resource type="PackedScene" uid="uid://dhkoxdfsonwbq" path="res://scenes/indicator.tscn" id="2_tarnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ycjm"]
+size = Vector2(146, 97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vy7b8"]
+
+[node name="SnowmanPlace" type="StaticBody2D"]
+script = ExtResource("1_r78lr")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_5g8j2")]
+action_name = "place Snowman"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-1.90735e-06, 1.5)
+shape = SubResource("RectangleShape2D_8ycjm")
+
+[node name="Indicator" parent="." instance=ExtResource("2_tarnb")]
+position = Vector2(-0.128357, -64.4806)
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.96681, 8.2589)
+shape = SubResource("RectangleShape2D_vy7b8")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
