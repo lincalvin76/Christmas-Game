@@ -12,11 +12,11 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_pressed() and (event.global_position - global_position).length() < CLICK_THRESHOLD && !dragged:
 			is_dragging = true
-			dragged = true
 		elif is_dragging:
 			is_dragging = false
 			if (event.global_position - global_position).length() > CLICK_THRESHOLD:
 				self.get_parent().z_index = -2
+				dragged = true
 				is_on_floor = false
 				var flick_vector: Vector2 = (event.global_position - global_position)
 				velocity = flick_vector.normalized() * FLICK_POWER
