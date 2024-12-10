@@ -1,6 +1,11 @@
-<div style="text-align: center;">
-![2024_12_01_10o_Kleki](https://github.com/user-attachments/assets/5dcf3a92-adb4-4cbc-9665-1fa93eeb5e40)
-</div>
+<img 
+    style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 30%;"
+    src="https://github.com/user-attachments/assets/5dcf3a92-adb4-4cbc-9665-1fa93eeb5e40" 
+    alt="Our logo">
+</img>
 
 <h1><ins>About:</ins></h1>
 <p>This is a game made in 2 weeks for the <strong>2024 "Daedalus: The Nightmare Before Christmas" Hackathon</strong>, As well as the <ins><strong>WINNER</strong></ins> for the Winter Track!</p>
