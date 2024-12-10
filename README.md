@@ -1,10 +1,18 @@
+<html>
+<head>
+<style>
+h1, p, h2{text-align: center;}
+</style>
+</head>
+<body>
+
 <img 
     style="display: block; 
            margin-left: auto;
            margin-right: auto;
            width: 30%;"
     src="https://github.com/user-attachments/assets/5dcf3a92-adb4-4cbc-9665-1fa93eeb5e40" 
-    alt="Our logo">
+    alt="Christmas Rush Logo">
 </img>
 
 <h1><ins>About:</ins></h1>
