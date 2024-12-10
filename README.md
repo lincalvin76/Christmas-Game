@@ -1,6 +1,6 @@
-<![2024_12_01_10o_Kleki](https://github.com/user-attachments/assets/5dcf3a92-adb4-4cbc-9665-1fa93eeb5e40)
+![2024_12_01_10o_Kleki](https://github.com/user-attachments/assets/5dcf3a92-adb4-4cbc-9665-1fa93eeb5e40)
 
-h1><ins>About:</ins></h1>
+<h1><ins>About:</ins></h1>
 <p>This is a game made in 2 weeks for the <strong>2024 "Daedalus: The Nightmare Before Christmas" Hackathon</strong>, As well as the <ins><strong>WINNER</strong></ins> for the Winter Track!</p>
 <p>In this project, I learned to use <ins></ins>Godot/GDScript</ins> and <ins>Aseprite</ins> to create art and make a functional game!</p>
 <p>If you would like to play it just go <a href="https://mrcookienub.itch.io/christmas-rush">here!</a></p>
